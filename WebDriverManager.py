@@ -10,7 +10,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 opt = Options()
 opt.add_argument("--headless")
-driver = webdriver.Chrome(ChromeDriverManager().install())
+driver = webdriver.Chrome(ChromeDriverManager().install(),chrome_options=opt)
 driver.get("https://www.flipkart.com/")
 driver.implicitly_wait(5)
 driver.find_element(By.NAME,"q").send_keys("iphone 11")
